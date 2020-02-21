@@ -17,7 +17,7 @@ def test_read_file_populates_data():
 
 @pytest.mark.parametrize(
     "input_string,expected_count",
-    [("hello world", 2), ("hello world example", 3), ("", 0), (" ", 0), (" ", 0)],
+    [("hello world", 2), ("hello world example", 3), ("", 0), (" ", 0), ("  ", 0)],
 )
 def test_scan_splits_string_correctly(input_string, expected_count):
     """Checks that scan function finds the correct number of words in the String"""
